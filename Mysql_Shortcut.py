@@ -157,7 +157,7 @@ def select_table():
         result_data = mysql.sql('select * from %s' % db_text)
         for row in range(int(table_rows[0][0])):
             for column in range(len(table_columns_name)):
-                item = QStandardItem(result_data[row][column])
+                item = QStandardItem(str(result_data[row][column]))
                 # 设置每个位置的文本值
                 model.setItem(row, column, item)
         gui.ui.tableView.setModel(model)
