@@ -126,7 +126,7 @@ def table_change():
         QMessageBox.information(None,'数据库提示','%s'%e)
 
 #提交QTextEdit输入的sql语句
-def excute_sql():
+def execute_sql():
     gui.ui.result_te.setText('')
     try:
         mysql = Mysql()
@@ -220,7 +220,7 @@ if __name__ == '__main__':
     gui.show()
     #按钮点击
     gui.ui.login_btn.clicked.connect(gui.login_db)
-    gui.ui.excute_btn.clicked.connect(excute_sql)
+    gui.ui.execute_btn.clicked.connect(execute_sql)
     gui.ui.create_db.clicked.connect(create_database)
     gui.ui.create_table.clicked.connect(create_table)
     gui.ui.drop_db.clicked.connect(drop_database)
